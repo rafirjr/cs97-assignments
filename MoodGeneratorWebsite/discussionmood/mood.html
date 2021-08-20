@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        .heading {
+          margin-top: 64px;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: greenyellow;
+        }
+  
+        .large-div {
+          font-size: 64px;
+          margin-bottom: 32px;
+        }
+  
+        .green-button {
+          padding: 24px;
+          border: none;
+          outline: none;
+          background-color: greenyellow;
+          color: green;
+          font-weight: bold;
+          border-radius: 2px;
+        }
+  
+        /* When we hover over the button, darken its color */
+        .green-button:hover {
+          background-color: green;
+          color: white;
+          cursor: pointer;
+        }
+  
+        body {
+          text-align: center;
+          font-family: monospace;
+  
+          /* Sets the background to an AI cat image, and lowers the opacity */
+          background-image: url('https://thiscatdoesnotexist.com/');
+          background-size: cover;
+          background-color: rgba(255, 255, 255, .75);
+          background-blend-mode: lighten;
+        }
+      </style>
+  </head>
+  <body>
+    <!-- Heading that says Mood Generator -->.
+    <h1 class="heading">Mood Generator</h1>
+    <div id="mood-div" class="large-div">N/A</div>
+    <button id="generate-mood-button" class="green-button">
+        Give me a mood
+    </button>
+    <script>
+      function generateMood() {
+        const emojis = ['🙂', '😍', '😂', '😢', '😡', '🥴', '😈','🥵' ];
+        const randomIndex = Math.floor(Math.random() * emojis.length);
+        return emojis[randomIndex];
+      }
+
+      const generateMoodButton = document.getElementById(
+        'generate-mood-button'
+      );
+      const moodDiv = document.getElementById('mood-div');
+
+      generateMoodButton.addEventListener('click', () => {
+        moodDiv.innerHTML = generateMood();
+      });
+    </script>
+  </body>
+</html>

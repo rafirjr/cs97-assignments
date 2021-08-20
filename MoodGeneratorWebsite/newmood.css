@@ -1,0 +1,38 @@
+.heading {
+    margin-top: 64px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: blue;
+  }
+
+  .large-div {
+    font-size: 64px;
+    margin-bottom: 32px;
+  }
+
+  .green-button {
+    padding: 24px;
+    border: none;
+    outline: none;
+    background-color: yellow;
+    color: green;
+    font-weight: bold;
+    border-radius: 2px;
+  }
+
+  /* When we hover over the button, darken its color */
+  .green-button:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }
+
+  body {
+    text-align: center;
+    font-family: monospace;
+
+    /* Sets the background to an AI cat image, and lowers the opacity */
+    background-image: url('https://thiscatdoesnotexist.com/');
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-blend-mode: lighten;
+  }
